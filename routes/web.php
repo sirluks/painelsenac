@@ -15,7 +15,7 @@ use App\Http\Controllers\CourseController;
 */
 
 Route::get('/', function () {
-    return "Hello World";
+    return "Hello World, bug fixed!";
 });
 
 Route::get('/course', [CourseController::class, 'index'])->name('courses');
