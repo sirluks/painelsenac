@@ -15,8 +15,11 @@ use App\Http\Controllers\CourseController;
 */
 
 Route::get('/', function () {
-    return "Hello World, e la vamos nós";
+    return view('welcome');
 });
 
 Route::get('/course', [CourseController::class, 'index'])->name('courses');
 Route::get('/course/{id}', [CourseController::class, 'show'])->name('course');
+Route::get('/msg', function () {
+    return view('msg');
+});

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Course;
 
 class CourseController extends Controller
@@ -12,7 +11,9 @@ class CourseController extends Controller
      */
     public function index()
     {
-        
+        $turmas = Course::all()->where('Estado da Turma', "Liberado Para Matrícula" );
+
+        return view('courses', ['turmas' => $turmas]);
     }
 
     /**
@@ -20,11 +21,11 @@ class CourseController extends Controller
      */    
     public function show(string $id)
     {
-        $turma = Course::all()->where('Código da Turma', $id);
-        dd($turma);
+        $turmas = Course::all()->where('Código da Turma', $id);       
+        return view('course', ['turmas' => $turmas]);
     }
 
     /**
      * Show the form for editing the specified resource.
-     */
+     */    
 }
