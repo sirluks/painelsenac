@@ -8,14 +8,14 @@
 <body>
     <h1>Cursos Dísponiveis</h1>
     <ul>     
-        <li>{{$turmas->first()["Nome da Turma"]}}</li>
-        <li>{{$turmas->first()["Código da Turma"]}}</li>
-        <li>{{$turmas->first()["Data Início"]}}</li>
-        <li>{{$turmas->first()["Data Término"]}}</li>
-        <li>{{$turmas->first()["Recurso Financeiro"]}}</li>
-        <li>{{$turmas->first()["CH"]}}</li>
-        <li>{{$turmas->first()["Dias de Execução"]}}</li>
-        <li>{{$turmas->first()["Valores Ofertas"]}}</li>
+        <li>{{$turma["Nome da Turma"]}}</li>
+        <li>{{$turma["Código da Turma"]}}</li>
+        <li>{{$turma["Data Início"]}}</li>
+        <li>{{$turma["Data Término"]}}</li>
+        <li>{{$turma["Recurso Financeiro"]}}</li>
+        <li>{{$turma["CH"]}}</li>
+        <li>{{$turma["Dias de Execução"]}}</li>
+        <li>{{$turma["Valores Ofertas"]}}</li>
     </ul>
 </body>
 </html>
