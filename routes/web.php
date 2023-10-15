@@ -18,6 +18,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function () {
+    $valor = '1';
+    $tipo = gettype($valor);
+    dd(gettype($tipo));
+    switch ($tipo) {
+        case 'integer':
+            echo 'encontrou o valor '.$valor;
+            break;
+        case 'string':
+            echo 'encontrou '.$valor;
+            break;
+        default:
+            echo 'valor não identificado';
+            break;
+    }
+});
+
+
 Route::get('/course', [CourseController::class, 'index'])->name('courses');
 Route::get('/course/{id}', [CourseController::class, 'show'])->name('course');
 Route::get('/msg', function () {

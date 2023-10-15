@@ -36,10 +36,8 @@
     <br>
     <br>
 
-    @php
-
         <p>Estou passando para informar que dia *<strong>{data}</strong>* a partir das *<strong>{horario}</strong>* se dará o 1º dia de Aula do curso de *<strong>{curso}</strong>*. 😉</p>
-        < p >* <strong>Obs1.: Informamos que é necessário que vc traga a sua garrafinha de agua</strong> *</p >
+        <p>* <strong>Obs1.: Informamos que é necessário que vc traga a sua garrafinha de agua</strong> *</p >
         <p></p>
         <p>*<strong>POR FAVOR!!! Confirme o recebimento.</strong>*</p><br>";
 
@@ -48,7 +46,9 @@
         A unidade *<strong>NUTEC – Núcleo de Ensino Tecnológico</strong>* informa que o curso *<strong>{curso}</strong>*, turno *<strong>{turno}</strong>* que seria realizado no período de *<strong>{datasigini}</strong>* a *<strong>{datasigfim}</strong>* foi adiado para o dia *<strong>{data inicial}</strong>* com término em *<strong>{datafim}</strong>*.<br>
         Conforme *<strong>cláusula 4.5</strong>* do Contrato de Prestação de Serviços Educacionais, _<em>o contratado se reserva o direito de adiar o curso que não atingir o percentual mínimo de 80%(oitenta por cento) de alunos previsto na programação</em>_.<br>
         $ult          
-        Desde já agradecemos a compreensão.""
+        Desde já agradecemos a compreensão."
+    @php
+
 
     @endphp
 
