@@ -12,7 +12,7 @@ class CourseController extends Controller
     public function index()
     {
         $turmas = Course::all()->where('Estado da Turma', "Liberado Para Matrícula" );
-
+        
         return view('courses', ['turmas' => $turmas]);
     }
 
@@ -21,8 +21,8 @@ class CourseController extends Controller
      */    
     public function show(string $id)
     {
-        $turmas = Course::all()->where('Código da Turma', $id);       
-        return view('course', ['turmas' => $turmas]);
+        $turma = Course::where('Código da Turma', $id)->firstOrFail()->toArray();
+        return view('course', ['turma' => $turma]);
     }
 
     /**
