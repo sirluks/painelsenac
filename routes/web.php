@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
+Route::get('/poo', function () {
     $valor = '1';
     $tipo = gettype($valor);
     dd(gettype($tipo));
