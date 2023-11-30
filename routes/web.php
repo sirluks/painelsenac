@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,26 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    $valor = '1';
-    $tipo = gettype($valor);
-    dd(gettype($tipo));
-    switch ($tipo) {
-        case 'integer':
-            echo 'encontrou o valor '.$valor;
-            break;
-        case 'string':
-            echo 'encontrou '.$valor;
-            break;
-        default:
-            echo 'valor não identificado';
-            break;
-    }
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-Route::get('/course', [CourseController::class, 'index'])->name('courses');
-Route::get('/course/{id}', [CourseController::class, 'show'])->name('course');
-Route::get('/msg', function () {
-    return view('msg');
-});
+require __DIR__.'/auth.php';

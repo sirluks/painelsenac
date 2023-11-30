@@ -7,7 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Sobre o APP Painel Senac
+
+
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
@@ -21,13 +23,23 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Atualizando Banco de Dados
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Para atualizar o banco de dados é necessario baixar o arquivo do SIG.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Se o banco de dados for no XAMPP, então seguir os seguintes passos:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Ligar o XAMPP (APACHE e MYSQL no minimo).
+- Abrir o PHPAdmin.
+- Buscar o Banco de Dados e a tabela da aplicação.
+- Ir para a aba Operações.
+- Clicar em Esvaziar a tabela(TRUNCATE).
+- Ir para a aba Importar.
+- Carregar o arquivo no campo proprio.
+- Alterar valor UTF-8 para ISO-8859-1
+- Pular a primeira linha (Cabeçalho).
+- Em "Opções especificas de formato" no campo "Colunas separadas com:", trocar o valor para ";".
+- Clicar em "Importar".
 
 ## Laravel Sponsors
 
