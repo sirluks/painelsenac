@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +30,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/cursos',[CourseController::class, 'index'])->name('cursos.index');
+
+Route::get('/curso/{id}',[CourseController::class, 'show'])->name('cursos.show');
